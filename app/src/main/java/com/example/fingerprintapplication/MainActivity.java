@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
                 mParaLabel.setText("Permission not granted to use Fingerprint");
             }else if(!keyguardManager.isKeyguardSecure()){
                 mParaLabel.setText("Add security lock to your phone");
-            }else if(fingerprintManager.hasEnrolledFingerprints()){
+            }else if(!fingerprintManager.hasEnrolledFingerprints()){
                 mParaLabel.setText("You should add atleast 1 Fingerprint to use this feature");
             }else{
                 mParaLabel.setText("Place your Finger on the Sensor");
